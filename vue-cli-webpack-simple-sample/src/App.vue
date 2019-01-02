@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div>
+    <home-component/>
   </div>
 </template>
 
