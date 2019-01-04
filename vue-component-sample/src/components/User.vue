@@ -10,12 +10,14 @@
       <div class="col-xs-12 col-sm-6">
         <app-user-detail
           :user-name="name"
-          :reset-func="resetName"
+          :reset-func="resetData"
           :user-age="age"></app-user-detail>
         <!-- <app-user-detail></app-user-detail> -->
       </div>
       <div class="col-xs-12 col-sm-6">
-        <app-user-edit :user-age="age"></app-user-edit>
+        <app-user-edit
+          :user-age="age"
+          @ageEdited="age = $event"></app-user-edit>
       </div>
     </div>
   </div>
@@ -36,8 +38,9 @@ export default {
     changeName() {
       this.name = "John"
     },
-    resetName() {
+    resetData() {
       this.name = "Max"
+      this.age = 27
     }
   },
   components: {

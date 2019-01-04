@@ -4,7 +4,7 @@
     <p>Many Details</p>
     <p>User Name: {{ switchName() }}</p>
     <p>User Age: {{ userAge }}</p>
-    <button @click="resetFunc()">Reset Name</button>
+    <button @click="resetFunc()">Reset Name and Age</button>
   </div>
 </template>
 
@@ -15,9 +15,7 @@ export default {
       type: String,
       default: "Max"
     },
-    resetFunc: {
-      type: Function
-    },
+    resetFunc: Function,
     userAge: Number
   },
   methods: {
