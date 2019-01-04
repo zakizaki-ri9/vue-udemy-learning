@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  props: ['userName'],
+  props: {
+    userName: {
+      type: String,
+      default: "Max"
+    }
+  },
   methods: {
     /**
      * userNameを逆転する
