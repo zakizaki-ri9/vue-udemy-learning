@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { eventBus } from '../main'
+
 export default {
   props: {
     userName: {
@@ -25,6 +27,14 @@ export default {
     switchName() {
       return this.userName.split("").reverse().join("")
     }
+  },
+  created() {
+    eventBus.$on('resetDataCustom', (user) => {
+      if (user !== null && user !== undefined) {
+        this.userName = user.name === undefined ? this.userName : user.name
+        this.userAge = user.age === undefined ? this.userAge : user.age
+      }
+    })
   },
 }
 </script>

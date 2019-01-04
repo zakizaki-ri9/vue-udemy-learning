@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import UserDetail from './UserDetail.vue';
-import UserEdit from './UserEdit.vue';
+import UserDetail from './UserDetail.vue'
+import UserEdit from './UserEdit.vue'
 
 export default {
   data: function() {
