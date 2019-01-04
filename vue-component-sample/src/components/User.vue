@@ -3,11 +3,12 @@
     <h1>The User Component</h1>
     <p>I'm an awesome User!</p>
     <button @click="changeName">Change User Name</button>
+    <p>Name is {{ name }}</p>
     <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <!-- <app-user-detail :user-name="name"></app-user-detail> -->
-        <app-user-detail></app-user-detail>
+        <app-user-detail :user-name="name" @nameWasReset="name = $event"></app-user-detail>
+        <!-- <app-user-detail></app-user-detail> -->
       </div>
       <div class="col-xs-12 col-sm-6">
         <app-user-edit></app-user-edit>
@@ -28,7 +29,7 @@ export default {
   },
   methods: {
     changeName() {
-      this.name = this.name === "Max" ? "John" : "Max"
+      this.name = "John"
     }
   },
   components: {
