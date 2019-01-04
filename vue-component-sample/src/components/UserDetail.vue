@@ -3,7 +3,7 @@
     <h3>You may view the User Details here</h3>
     <p>Many Details</p>
     <p>User Name: {{ switchName() }}</p>
-    <button @click="resetName">Reset Name</button>
+    <button @click="resetFunc()">Reset Name</button>
   </div>
 </template>
 
@@ -13,6 +13,9 @@ export default {
     userName: {
       type: String,
       default: "Max"
+    },
+    resetFunc: {
+      type: Function
     }
   },
   methods: {
@@ -21,10 +24,6 @@ export default {
      */
     switchName() {
       return this.userName.split("").reverse().join("")
-    },
-    resetName() {
-      this.userName = "Max"
-      this.$emit('nameWasReset', this.userName)
     }
   },
 }

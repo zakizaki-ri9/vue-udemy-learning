@@ -7,7 +7,9 @@
     <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <app-user-detail :user-name="name" @nameWasReset="name = $event"></app-user-detail>
+        <app-user-detail
+          :user-name="name"
+          :resetFunc="resetName"></app-user-detail>
         <!-- <app-user-detail></app-user-detail> -->
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -30,6 +32,9 @@ export default {
   methods: {
     changeName() {
       this.name = "John"
+    },
+    resetName() {
+      this.name = "Max"
     }
   },
   components: {
