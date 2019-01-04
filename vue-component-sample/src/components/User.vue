@@ -4,16 +4,18 @@
     <p>I'm an awesome User!</p>
     <button @click="changeName">Change User Name</button>
     <p>Name is {{ name }}</p>
+    <p>Age is {{ age }}</p>
     <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <app-user-detail
           :user-name="name"
-          :resetFunc="resetName"></app-user-detail>
+          :reset-func="resetName"
+          :user-age="age"></app-user-detail>
         <!-- <app-user-detail></app-user-detail> -->
       </div>
       <div class="col-xs-12 col-sm-6">
-        <app-user-edit></app-user-edit>
+        <app-user-edit :user-age="age"></app-user-edit>
       </div>
     </div>
   </div>
@@ -26,7 +28,8 @@ import UserEdit from './UserEdit.vue';
 export default {
   data: function() {
     return {
-      name: 'Max'
+      name: 'Max',
+      age: 27
     }
   },
   methods: {
