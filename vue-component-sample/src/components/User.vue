@@ -26,6 +26,7 @@
 <script>
 import UserDetail from './UserDetail.vue'
 import UserEdit from './UserEdit.vue'
+import { eventBus } from '../main'
 
 export default {
   data: function() {
@@ -41,6 +42,7 @@ export default {
     resetData() {
       this.name = "Max"
       this.age = 27
+      eventBus.changeAgeToEdit(this.age)
     }
   },
   components: {

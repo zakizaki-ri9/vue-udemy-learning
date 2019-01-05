@@ -31,8 +31,8 @@ export default {
   created() {
     eventBus.$on('resetDataCustom', (user) => {
       if (user !== null && user !== undefined) {
-        this.userName = user.name === undefined ? this.userName : user.name
-        this.userAge = user.age === undefined ? this.userAge : user.age
+        this.userName = user.name !== undefined ? user.name : this.userName
+        this.userAge = user.age !== undefined ? user.age : this.userAge
       }
     })
   },
