@@ -24,32 +24,32 @@
 </template>
 
 <script>
-import UserDetail from './UserDetail.vue'
-import UserEdit from './UserEdit.vue'
-import { eventBus } from '../main'
+import UserDetail from "./UserDetail.vue";
+import UserEdit from "./UserEdit.vue";
+import { eventBus } from "../main";
 
 export default {
   data: function() {
     return {
-      name: 'Max',
+      name: "Max",
       age: 27
-    }
+    };
   },
   methods: {
     changeName() {
-      this.name = "John"
+      this.name = "John";
     },
     resetData() {
-      this.name = "Max"
-      this.age = 27
-      eventBus.changeAgeToEdit(this.age)
+      this.name = "Max";
+      this.age = 27;
+      eventBus.changeAgeToEdit(this.age);
     }
   },
   components: {
     appUserDetail: UserDetail,
     appUserEdit: UserEdit
   }
-}
+};
 </script>
 
 <style scoped>
