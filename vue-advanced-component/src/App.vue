@@ -1,11 +1,10 @@
-<template>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <app-quote></app-quote>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  .container
+    .row
+      .col-xs-12
+        app-quote(quote='A wonderful quote!')
+        h2 The Quote
+        p A wonderful Quote
 </template>
 
 <script>

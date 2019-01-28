@@ -1,12 +1,11 @@
-<template>
-  <div>
-    <p>A wonderful Quote!</p>
-  </div>
+<template lang="pug">
+  div
+    p {{ quote }}
 </template>
 
 <script>
 export default {
-  
+  props: ['quote']
 }
 </script>
 
