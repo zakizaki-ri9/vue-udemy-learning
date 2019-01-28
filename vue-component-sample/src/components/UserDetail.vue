@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { eventBus } from '../main'
+import { eventBus } from "../main";
 
 export default {
   props: {
@@ -25,18 +25,21 @@ export default {
      * userNameを逆転する
      */
     switchName() {
-      return this.userName.split("").reverse().join("")
+      return this.userName
+        .split("")
+        .reverse()
+        .join("");
     }
   },
   created() {
-    eventBus.$on('resetDataCustom', (user) => {
+    eventBus.$on("resetDataCustom", user => {
       if (user !== null && user !== undefined) {
-        this.userName = user.name !== undefined ? user.name : this.userName
-        this.userAge = user.age !== undefined ? user.age : this.userAge
+        this.userName = user.name !== undefined ? user.name : this.userName;
+        this.userAge = user.age !== undefined ? user.age : this.userAge;
       }
-    })
-  },
-}
+    });
+  }
+};
 </script>
 
 <style scoped>

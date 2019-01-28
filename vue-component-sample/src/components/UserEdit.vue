@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { eventBus } from '../main'
+import { eventBus } from "../main";
 
 export default {
   props: {
@@ -18,26 +18,26 @@ export default {
   data() {
     return {
       age: this.userAge
-    }
+    };
   },
   methods: {
     editAge() {
-      this.age = 20
-      this.$emit('ageEdited', this.age)
-      eventBus.changeAge(this.age)
+      this.age = 20;
+      this.$emit("ageEdited", this.age);
+      eventBus.changeAge(this.age);
     },
     editAgeToChild() {
-      this.age = 30
+      this.age = 30;
       //eventBus.$emit('resetDataCustom', { age: this.userAge })
-      eventBus.changeAge(this.age)
+      eventBus.changeAge(this.age);
     }
   },
   created() {
-    eventBus.$on('changeAgeToEdit', (age) => {
-      this.age = age
-    })
-  },
-}
+    eventBus.$on("changeAgeToEdit", age => {
+      this.age = age;
+    });
+  }
+};
 </script>
 
 <style scoped>
