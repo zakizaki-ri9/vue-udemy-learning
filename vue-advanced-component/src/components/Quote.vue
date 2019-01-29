@@ -1,9 +1,10 @@
 <template lang="pug">
   div
-    hr
-    slot
-    hr
+    div
+      slot(name="title")
     p {{ quote }}
+    .title
+      slot(name="content")
 </template>
 
 <script>
@@ -19,5 +20,11 @@ div {
   padding: 30px;
   margin: 30px auto;
   text-align: center;
+}
+h2 {
+  color: red;
+}
+.title {
+  font-style: italic;
 }
 </style>
