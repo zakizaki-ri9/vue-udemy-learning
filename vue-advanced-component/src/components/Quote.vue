@@ -2,6 +2,9 @@
   div
     div
       slot(name="title")
+      span(style="color: #ccc")
+        slot(name="subtitle")
+          | The Subtitle
     p {{ quote }}
     .title
       slot(name="content")
