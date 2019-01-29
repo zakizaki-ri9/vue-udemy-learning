@@ -3,8 +3,8 @@
     .row
       .col-xs-12
         app-quote(quote='A wonderful quote!')
-        h2 The Quote
-        p A wonderful Quote
+          h2 The Quote
+          p A wonderful Quote
 </template>
 
 <script>

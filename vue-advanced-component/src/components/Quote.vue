@@ -1,5 +1,8 @@
 <template lang="pug">
   div
+    hr
+    slot
+    hr
     p {{ quote }}
 </template>
 
